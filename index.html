@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Soluções Inteligentes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050214; /* Roxo quase preto */
+        }
+        .bg-gradient-tech {
+            background: radial-gradient(circle at top right, rgba(76, 29, 149, 0.3), transparent),
+                        radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.2), transparent);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#050214',
+                            purple: '#6d28d9',
+                            blue: '#2563eb',
+                            accent: '#a855f7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-200 antialiased bg-gradient-tech min-h-screen">
+
+    <nav class="fixed w-full z-50 border-b border-white/10 bg-brand-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 company-name">
+                </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-blue-400 transition">Início</a>
+                <a href="#projetos" class="hover:text-blue-400 transition">Projetos</a>
+                <a href="#contato" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-40 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/10 border border-blue-400/20 rounded-full">
+                Especialista em RPA & IA
+            </span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+                Transformando processos em <span class="text-blue-500">Inteligência Operacional.</span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Soluções personalizadas de automação e inteligência artificial para escalar o seu negócio e eliminar tarefas repetitivas.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#projetos" class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition text-lg">
+                    Ver Projetos
+                </a>
+                <a href="#contato" class="px-8 py-4 glass-card font-bold rounded-xl transition text-lg">
+                    Fale Conosco
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Projetos em Destaque</h2>
+                    <p class="text-gray-400">Como a <span class="company-name font-semibold"></span> está inovando no mercado.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-3xl group">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sistema de Orçamento para Mecânicos</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Automação completa da geração de orçamentos. O sistema captura dados de peças, mão de obra e envia diretamente para o cliente, reduzindo o tempo de resposta e aumentando a taxa de aprovação.
+                    </p>
+                    <ul class="flex flex-wrap gap-2 mb-8 text-xs font-mono">
+                        <li class="px-3 py-1 bg-white/5 rounded-md border border-white/10">Python</li>
+                        <li class="px-3 py-1 bg-white/5 rounded-md border border-white/10">RPA</li>
+                        <li class="px-3 py-1 bg-white/5 rounded-md border border-white/10">SQLite</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl group">
+                    <div class="w-14 h-14 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Agendamento Inteligente com IA</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Bot integrado com WhatsApp e Google Calendar que utiliza Processamento de Linguagem Natural para entender horários e preferências dos clientes, realizando agendamentos sem intervenção humana.
+                    </p>
+                    <ul class="flex flex-wrap gap-2 mb-8 text-xs font-mono">
+                        <li class="px-3 py-1 bg-white/5 rounded-md border border-white/10">Gemini API</li>
+                        <li class="px-3 py-1 bg-white/5 rounded-md border border-white/10">Webhooks</li>
+                        <li class="px-3 py-1 bg-white/5 rounded-md border border-white/10">Node.js</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="py-20 border-t border-white/10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div>
+                <div class="text-3xl font-bold mb-4 company-name"></div>
+                <p class="text-gray-500 max-w-sm">Soluções de engenharia de software e automação focadas em resultados reais.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">GitHub</a>
+                <a href="mailto:contato@exemplo.com" class="text-gray-400 hover:text-white transition">E-mail</a>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-xs text-gray-600">
+            &copy; 2026 <span class="company-name"></span>. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Mude aqui o nome da sua empresa:
+        const NOME_DA_EMPRESA = "BRUNO AUTOMATIONS"; 
+
+        // Injeta o nome em todos os elementos com a classe 'company-name'
+        document.querySelectorAll('.company-name').forEach(el => {
+            el.textContent = NOME_DA_EMPRESA;
+        });
+    </script>
+</body>
+</html>
